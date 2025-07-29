@@ -1,0 +1,295 @@
+/* ------------------------------Base: Mobile First------------------------------ */
+html, body 
+{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper 
+{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.main-header 
+{
+  background-color: #004d99;
+  color: white;
+  padding: 1rem;
+}
+
+/* Header top: logo centered, hamburger to the right */
+.header-top 
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo 
+{
+  flex: 1;
+  font-family: 'Stylish', sans-serif;
+  text-align: center;
+
+}
+
+.hamburger 
+{
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  z-index: 10;
+}
+
+
+/* Horizontal nav for mobile (hidden until toggled) */
+.horizontal-nav 
+{
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.nav-links 
+{
+  max-height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.nav-links li a 
+{
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  font-size: 1.05rem;
+}
+
+/* Active nav for mobile toggle */
+.nav-links.active 
+{
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Section nav hidden by default */
+.section-nav 
+{
+  display: none;
+}
+
+.layout-wrapper 
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content 
+{
+  padding: 1rem;
+}
+
+/* Footer pinned at the bottom */
+footer 
+{
+  background-color: #004d99;
+  color: white;
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+h2
+{
+  font-family: "Akaya Kanadaka", system-ui;
+  font-size: 2rem;
+}
+
+.content-and-image 
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem 3rem;
+}
+
+.photo-box 
+{
+  width: 380px;       
+  height: 280px;
+  border: 3px;
+  overflow: hidden;
+  margin-right: 8rem;  
+}
+
+/* Main content area */
+.content 
+{
+  flex: 1;
+}
+
+/* Hidden on tablet and mobile */
+.desktop-only 
+{
+  display: none;
+}
+
+/* ------------------------------Tablet View------------------------------ */
+@media (min-width: 601px) 
+{
+  .logo 
+  {
+    font-size: 2.6rem;
+  }
+
+  .layout-wrapper 
+  {
+    flex-direction: column;
+  }
+}
+
+/* ------------------------------Desktop View------------------------------ */
+@media (min-width: 1001px) 
+{
+  .hamburger 
+  {
+    display: none;
+  }
+
+  .logo 
+  {
+    font-size: 3.3rem;
+  }
+
+  .nav-links 
+  {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+    max-height: none;
+    opacity: 1;
+  }
+
+  .nav-links li a 
+  {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .nav-links li a:hover,
+  .nav-links li a:focus
+  {
+    background-color: #ffffff;
+    color: #004a99;
+    outline: none;
+  }
+
+  .horizontal-nav 
+  {
+    margin-top: 0.5rem;
+  }
+
+  .layout-wrapper 
+  {
+    flex-direction: row;
+    flex: 1;
+  }
+
+  .section-nav 
+  {
+    display: block;
+    width: 200px;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    align-self: stretch;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .section-nav ul 
+  {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-nav li a 
+  {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .section-nav li a:hover,
+  .section-nav li a:focus
+  {
+    background-color: #004a99;
+    color: #fff;
+    outline: none;
+  }
+
+  .main-content 
+  {
+    flex: 1;
+    padding: 2rem;
+  }
+
+  .desktop-only 
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .photo-box 
+  {
+    width: 400px;
+    height: 300px;
+    border: 3px;
+    overflow: hidden;
+  }
+
+  .photo-box img 
+  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
