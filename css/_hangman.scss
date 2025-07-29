@@ -1,0 +1,64 @@
+@import 'variables';
+@import 'mixins';
+
+.hangman-wrapper
+{
+    @include centered;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+
+
+    .hangman-graphic img
+    {
+
+    }
+
+    .hangman-info
+    {
+        text-align: center;
+
+        #wordDisplay
+        {
+            font-size: 2rem;
+            letter-spacing: 0.5rem;
+        }
+
+        #letterInput
+        {
+            font-size: 1.2rem;
+            padding: 0.4rem;
+            margin-top: 0.5rem;
+            width: 150px;
+            text-align: justify;
+        }
+
+        #resultMessage
+        {
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .hidden
+        {
+            display: none;
+        }
+
+        button
+        {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+    
+
+            &:hover
+            {
+                background-color: darken($primary-color, 10%);
+            }
+        }
+    }
+}

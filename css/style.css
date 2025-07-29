@@ -1,3 +1,45 @@
+.hangman-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.hangman-wrapper .hangman-info {
+  text-align: center;
+}
+.hangman-wrapper .hangman-info #wordDisplay {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+}
+.hangman-wrapper .hangman-info #letterInput {
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  margin-top: 0.5rem;
+  width: 150px;
+  text-align: justify;
+}
+.hangman-wrapper .hangman-info #resultMessage {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.hangman-wrapper .hangman-info .hidden {
+  display: none;
+}
+.hangman-wrapper .hangman-info button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.hangman-wrapper .hangman-info button:hover {
+  background-color: rgb(1.762295082, 87.2336065574, 213.237704918);
+}
+
 /* ------------------------------Base: Mobile First------------------------------ */
 html, body {
   height: 100%;
