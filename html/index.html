@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>comp2132 project</title>
+
+  <link rel="stylesheet" href="../css/mainstyle.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <script src="../jscript/assignment08.js" defer></script>
+  <script src="../jscript/home.js"defer></script>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="main-header">
+      <div class="header-top">
+        <div class="logo">COMP2132</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+      </div>
+      <nav class="horizontal-nav">
+        <ul class="nav-links" id="topNavLinks">
+          <li><a href="./index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="layout-wrapper">
+      <!-- Side Nav -->
+      <nav class="section-nav">
+        <ul>
+          <li><a href="#PartA">Part A: Product Carousel</a></li>
+          <li><a href="#PartB">Part B: Pacman</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <main>
+        <div class="flex-container">
+          <!-- Part A: Product Carousel -->
+          <section id="PartA">
+            <h2>Part A: Product Carousel</h2>
+            <div class="carousel">
+              <img id="bikeImage" src="../images/assignment08img/product/bike-1.jpg" alt="Bike Image">
+              <div class="carousel-buttons">
+                <button id="spinBtn">Spin</button>
+                <button id="reverseBtn">Reverse Spin</button>
+                <button id="stopBtn">Stop</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Part B: Pacman -->
+          <section id="PartB">
+            <h2 class="pacmanh2">Part B: Pacman</h2>
+            <p class="instructions">Control movement using the <strong>W A S D</strong> keys, use <strong>X</strong> to stop</p>
+            <div class="pacman-layout">
+              <div class="pacman-box" id="pacmanBox">
+                <img id="pacman" src="../images/assignment08img/pacman/pac-man-static.gif" alt="Pacman">
+              </div>
+              <div class="controls">
+                <button id="moveUp">W</button>
+                <div class="controls-row">
+                  <button id="moveLeft">A</button>
+                  <button id="moveDown">S</button>
+                  <button id="moveRight">D</button>
+                </div>
+                <button id="stopMove">X</button>
+              </div>
+              
+            </div>
+          </section>
+        </div>
+      </main>
+
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Helen Ma</p>
+    </footer>
+</body>
+</html>
