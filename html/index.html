@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>comp2132 project</title>
 
-  <link rel="stylesheet" href="../css/mainstyle.css" />
+  <link rel="stylesheet" href="../css/style.css" />
 
   <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
     <!-- Header -->
     <header class="main-header">
       <div class="header-top">
-        <div class="logo">COMP2132</div>
+        <div class="logo">COMP2132 Project</div>
         <button class="hamburger" onclick="toggleMenu()">☰</button>
       </div>
       <nav class="horizontal-nav">
@@ -33,45 +33,31 @@
       <!-- Side Nav -->
       <nav class="section-nav">
         <ul>
-          <li><a href="#PartA">Part A: Product Carousel</a></li>
-          <li><a href="#PartB">Part B: Pacman</a></li>
+          <li><a href="#hangmangame">Hangman Game</a></li>
         </ul>
       </nav>
 
       <!-- Main Content -->
       <main>
         <div class="flex-container">
-          <!-- Part A: Product Carousel -->
-          <section id="PartA">
-            <h2>Part A: Product Carousel</h2>
-            <div class="carousel">
-              <img id="bikeImage" src="../images/assignment08img/product/bike-1.jpg" alt="Bike Image">
-              <div class="carousel-buttons">
-                <button id="spinBtn">Spin</button>
-                <button id="reverseBtn">Reverse Spin</button>
-                <button id="stopBtn">Stop</button>
-              </div>
-            </div>
-          </section>
+          <section id="hangmangame">
+            <h2>Hangman Game</h2>
+            <p class="instructions">Guess the word by typing letters below!</p>
+            <div class="hangman-wrapper">
 
-          <!-- Part B: Pacman -->
-          <section id="PartB">
-            <h2 class="pacmanh2">Part B: Pacman</h2>
-            <p class="instructions">Control movement using the <strong>W A S D</strong> keys, use <strong>X</strong> to stop</p>
-            <div class="pacman-layout">
-              <div class="pacman-box" id="pacmanBox">
-                <img id="pacman" src="../images/assignment08img/pacman/pac-man-static.gif" alt="Pacman">
-              </div>
-              <div class="controls">
-                <button id="moveUp">W</button>
-                <div class="controls-row">
-                  <button id="moveLeft">A</button>
-                  <button id="moveDown">S</button>
-                  <button id="moveRight">D</button>
+                <div class="hangman-graphic">
+                    <img id="hangmanImage" src="" alt="" />
                 </div>
-                <button id="stopMove">X</button>
-              </div>
-              
+
+                <div class="hangman-info">
+                    <p id="hintText">Hint: ...</p>
+                    <p id="wordDisplay">_ _ _ _</p>
+                    <input type="text" id="letterInput" maxlength="1" placeholder="Type a letter"/>
+                    <div id="guessedLetters">Guessed: </div>
+                    <p id="resultMessage"></p>
+                    <button id="playAgainBtn" class="hidden">Play Again</button>
+                </div>
+                
             </div>
           </section>
         </div>
