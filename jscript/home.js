@@ -1,7 +1,7 @@
 // ===== Constants =====
 const hangman_max_tries = 6;
-const words_json_path = '../data/json/words.json';
-const hangman_image_path = '../images/';
+const words_json_path = 'https://hm61bcit.github.io/comp2132-project/data/json/words.json';
+const hangman_image_path = 'https://hm61bcit.github.io/comp2132-project/images/';
 
 // ===== Element Variables =====
 let hintText;
@@ -68,10 +68,12 @@ function updateUI() {
   guessedLettersDisplay.textContent = 'Guessed: ' + guessedLetters.join(', ');
   hangmanImage.src = hangman_image_path + 'hangman' + wrongGuesses + '.png';
 
+  if (wrongGuesses < hangman_max_tries && display.includes('_')) {
   resultMessage.textContent = '';
   playAgainBtn.classList.add('hidden');
   letterInput.disabled = false;
   letterInput.value = '';
+  }
 }
 
 // ===== Guess Letter =====
@@ -114,6 +116,8 @@ function endGame(won) {
 
 // ===== Event Listeners =====
 letterInput.addEventListener('keyup', function (event) {
+  if (letterInput.disabled) return;
+
   const key = event.key.toUpperCase();
   if (/^[A-Z]$/.test(key)) {
     guessLetter(key);
