@@ -1,0 +1,17 @@
+[
+  { "word": "coffee"  , "hint": "A morning drink that helps you wake up"       },
+  { "word": "wallet"  , "hint": "You use this to carry your money and cards"   },
+  { "word": "kitchen" , "hint": "Where you cook your meals"                    },
+  { "word": "pillow"  , "hint": "What your head rests on at night"             },
+  { "word": "shampoo" , "hint": "Used to clean your hair"                      },
+  { "word": "laptop"  , "hint": "Portable computer for work or play"           },
+  { "word": "umbrella", "hint": "Protects you from rain"                       },
+  { "word": "grocery" , "hint": "You buy this kind of item at the supermarket" },
+  { "word": "jacket"  , "hint": "You wear this when it’s cold outside"         },
+  { "word": "glasses" , "hint": "Helps you see clearly"                        },
+  { "word": "backpack", "hint": "Used by students to carry books"              },
+  { "word": "charger" , "hint": "Keeps your phone from dying"                  },
+  { "word": "mirror"  , "hint": "Used to see your reflection"                  },
+  { "word": "window"  , "hint": "Lets light into a room"                       },
+  { "word": "remote"  , "hint": "Used to control a TV"                         }
+]
