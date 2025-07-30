@@ -1,7 +1,7 @@
 // ===== Constants =====
 const hangman_max_tries = 6;
 const words_json_path = '../data/json/words.json';
-const hangman_image_path = '../images/hangman/';
+const hangman_image_path = '../images/';
 
 // ===== Element Variables =====
 let hintText;
