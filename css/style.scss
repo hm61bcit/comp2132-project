@@ -1,6 +1,6 @@
-@import 'variables';
-@import 'mixins';
-@import 'hangman';
+@use './variables';
+@use './mixins';
+@use './hangman';
 
 /* ------------------------------Base: Mobile First------------------------------ */
 html, body 
@@ -44,6 +44,14 @@ html, body
   text-align: center;
 
 }
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
 
 .hamburger 
 {

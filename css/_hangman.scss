@@ -1,12 +1,18 @@
-@import 'variables';
-@import 'mixins';
+@use './variables';
+@use './mixins';
+@use 'sass:color';
+
+.hangmangame {
+    
+}
 
 .hangman-wrapper {
-  @include centered;
+  @include mixins.centered;
   flex-direction: column;
-  gap: 1rem;
+  gap: 5rem;
   margin-top: 2rem;
-  font-family: $font-main;
+  font-family: variables.$font-main;
+
 
   .hangman-graphic img {
     max-width: 180px;
@@ -40,7 +46,7 @@
 
     button {
       margin-top: 1rem;
-      background-color: $primary-color;
+      background-color: variables.$primary-color;
       color: white;
       padding: 0.5rem 1.2rem;
       font-size: 1rem;
@@ -49,7 +55,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: darken($primary-color, 10%);
+        background-color: color.adjust(variables.$primary-color, $lightness: -10%);
       }
     }
   }
